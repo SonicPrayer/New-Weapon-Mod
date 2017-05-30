@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LanguageData>  
+
+   
+   
+   <Gun_mossberg500a_cwm.label>Сделать Mossberg 500A</Gun_mossberg500a_cwm.label>
+   <Gun_mossberg500a_cwm.description>Сделать Mossberg 500A.</Gun_mossberg500a_cwm.description>
+   <Gun_mossberg500a_cwm.jobString>делает Mossberg 500A</Gun_mossberg500a_cwm.jobString>
+   
+   <Gun_winmodel1887_cwm.label>Сделать Winchester Model 1887</Gun_winmodel1887_cwm.label>
+   <Gun_winmodel1887_cwm.description>Сделать Winchester Model 1887.</Gun_winmodel1887_cwm.description>
+   <Gun_winmodel1887_cwm.jobString>делает Winchester Model 1887</Gun_winmodel1887_cwm.jobString>
+   
+   <Gun_m1014_cwm.label>Сделать M1014</Gun_m1014_cwm.label>
+   <Gun_m1014_cwm.description>Сделать M1014.</Gun_m1014_cwm.description>
+   <Gun_m1014_cwm.jobString>делает M1014</Gun_m1014_cwm.jobString>
+   
+   <Gun_saiga12_cwm.label>Сделать Сайга 12К</Gun_saiga12_cwm.label>
+   <Gun_saiga12_cwm.description>Сделать Сайга 12К.</Gun_saiga12_cwm.description>
+   <Gun_saiga12_cwm.jobString>делает Сайга 12К</Gun_saiga12_cwm.jobString>
+   
+   
+</LanguageData>

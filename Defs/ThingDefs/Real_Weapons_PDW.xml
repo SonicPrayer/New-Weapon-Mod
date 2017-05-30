@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ThingDefs>
+
+   <ThingDef Name="BaseGunPDW" Abstract="True">
+		<category>Item</category>
+		<thingClass>ThingWithComps</thingClass>
+		<equipmentType>Primary</equipmentType>
+		<pathCost>10</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<selectable>True</selectable>
+		<graphicData>
+		  <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <Flammability>1.0</Flammability>
+		  <DeteriorationRate>1</DeteriorationRate>
+		  <SellPriceFactor>0.5</SellPriceFactor>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<techLevel>Industrial</techLevel>
+		<thingCategories>
+		  <li>WeaponsRanged</li>
+		</thingCategories>
+		<inspectorTabs>
+		  <li>ITab_Art</li>
+		</inspectorTabs>
+		<comps>
+		  <li Class="CompProperties_Forbiddable"/>
+		  <li>
+			<compClass>CompEquippable</compClass>
+		  </li>
+		  <li>
+			<compClass>CompQuality</compClass>
+		  </li>
+		  <li Class="CompProperties_Art">
+			<nameMaker>ArtName_WeaponGun</nameMaker>
+			<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+			<minQualityForArtistic>Excellent</minQualityForArtistic>
+		  </li>
+		</comps>
+	  </ThingDef>
+
+	  <ThingDef Name="BaseMakeableGunPDW" ParentName="BaseGunPDW" Abstract="True">
+		<recipeMaker>
+		  <workSpeedStat>SmithingSpeed</workSpeedStat>
+		  <workSkill>Crafting</workSkill>
+		  <effectWorking>Smith</effectWorking>
+		  <soundWorking>Recipe_Smith</soundWorking>
+		  <recipeUsers>
+			<li>TableMachining</li>
+		  </recipeUsers>
+		  <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+		</recipeMaker>
+	  </ThingDef>
+
+
+	  <ThingDef Name="BaseHumanGunPDW" ParentName="BaseGunPDW" Abstract="True">
+		<weaponTags>
+		  <li>Gun</li>
+		</weaponTags>
+	  </ThingDef>
+	  
+	  <ThingDef Name="BaseHumanMakeableGunPDW" ParentName="BaseMakeableGunPDW" Abstract="True">
+		<weaponTags>
+		  <li>Gun</li>
+		</weaponTags>
+	  </ThingDef>
+	  
+<!-- =============1lvl============== -->
+	  
+   <!-- =============9x19mm p============== -->	  
+	  
+   <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MachinePistol</defName>
+    <label>9x19mm p</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>6</damageAmountBase>
+      <speed>100</speed>
+    </projectile>
+   </ThingDef>
+   
+   <!-- =============UZI Carbine============== -->
+  
+   <ThingDef ParentName="BaseHumanGunPDW">
+    <defName>Gun_uzi_cwm</defName>
+    <label>UZI Carbine</label>
+    <description>The Uzi has found use as a personal defense weapon by rear-echelon troops, officers, artillery troops and tankers, as well as a frontline weapon by elite light infantry assault forces.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_uzi</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>400</MarketValue>
+	  <Mass>3.6</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.14</AccuracyLong>
+      <RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>pdw</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_MachinePistol</projectileDef>
+        <warmupTime>0.83</warmupTime>
+        <range>32</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <soundCast>Shotuzi</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+   <!-- =============Beretta 93R============== -->
+   
+   <ThingDef ParentName="BaseHumanGunPDW">
+    <defName>Gun_m93r_cwm</defName>
+    <label>Beretta 93R</label>
+    <description>A modified version of the M9 pistol, the 93R is able to fire in 3 Round Bursts.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_m93r</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>350</MarketValue>
+	  <Mass>1.17</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.20</AccuracyLong>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>pdw</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_MachinePistol</projectileDef>
+        <warmupTime>0.8</warmupTime>
+        <range>27</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <soundCast>Shotm93r</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+   <!-- =============Scorpion Vz.68============== -->
+   
+   <ThingDef ParentName="BaseHumanGunPDW">
+    <defName>Gun_scorpionvz68_cwm</defName>
+    <label>Scorpion Vz.68</label>
+    <description>Although it was developed for use with security forces and special forces, the weapon was also accepted into service with the Czechoslovak Army, as a personal sidearm for lower-ranking army staff, vehicle drivers, armoured vehicle personnel and special forces.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_scorpionvz68</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <WorkToMake>40000</WorkToMake>
+	  <Mass>2.0</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.73</AccuracyShort>
+      <AccuracyMedium>0.43</AccuracyMedium>
+      <AccuracyLong>0.16</AccuracyLong>
+      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>pdw</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_MachinePistol</projectileDef>
+        <warmupTime>1.0</warmupTime>
+        <range>29</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>Shotscorpionvz68</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+<!-- =============2lvl============== -->
+   
+   <!-- =============MP5А2============== -->
+   
+   <ThingDef ParentName="BaseHumanGunPDW">
+    <defName>Gun_mp5a2_cwm</defName>
+    <label>MP5А2</label>
+    <description>Is a 9mm submachine gun of German design, developed in the 1960s.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_mp5a2</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <Mass>2.71</Mass>
+      <AccuracyTouch>0.86</AccuracyTouch>
+      <AccuracyShort>0.76</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.30</AccuracyLong>
+      <RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>pdw</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_MachinePistol</projectileDef>
+        <warmupTime>0.9</warmupTime>
+        <range>34</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>Shotmp5a2</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+  
+   <!-- =============MP5SD============== -->
+   
+   <ThingDef ParentName="BaseHumanGunPDW">
+    <defName>Gun_mp5sd_cwm</defName>
+    <label>MP5SD</label>
+    <description>A special version of the famous SMG for quiet operations with redesigned balanced mechanics and muffler. Exclusive intermediate weapon for scouts.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_mp5sd</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>500</MarketValue>
+	  <Mass>3.2</Mass>
+      <AccuracyTouch>0.86</AccuracyTouch>
+      <AccuracyShort>0.76</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.15</AccuracyLong>
+      <RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>pdw</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_MachinePistol</projectileDef>
+        <warmupTime>0.9</warmupTime>
+        <range>34</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>Shotmp5sd</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>3</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+  
+   <!-- =============PP-19============== -->
+  
+   <ThingDef ParentName="BaseHumanGunPDW">
+    <defName>Gun_pp19_cwm</defName>
+    <label>PP-19</label>
+    <description>Submachine gun developed in Russia, featuring a helical high capacity magazine.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_pp19</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>550</MarketValue>
+	  <Mass>3.2</Mass>
+      <AccuracyTouch>0.86</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.56</AccuracyMedium>
+      <AccuracyLong>0.35</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>pdw</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_MachinePistol</projectileDef>
+        <warmupTime>1.17</warmupTime>
+        <range>33</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>Shotpp19</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+
+<!-- =============3lvl============== -->
+   
+   <!-- =============11.43x23mm============== -->
+	
+   <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_11dot43x23mm</defName>
+    <label>11.43x23mm</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>100</speed>
+    </projectile>
+   </ThingDef>
+   
+   <!-- =============HK UMP============== -->
+   
+   <ThingDef ParentName="BaseHumanGunPDW">
+    <defName>Gun_ump_cwm</defName>
+    <label>HK UMP</label>
+    <description>The UMP is a submachine gun developed and manufactured by Heckler and Koch.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_ump</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <WorkToMake>40000</WorkToMake>
+      <MarketValue>520</MarketValue>
+	  <Mass>2.45</Mass>
+      <AccuracyTouch>0.92</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.54</AccuracyMedium>
+      <AccuracyLong>0.37</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>pdw</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_11dot43x23mm</projectileDef>
+        <warmupTime>1.1</warmupTime>
+        <range>35</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shotump</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+   <!-- =============5.7x28mm============== -->
+   
+   <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_5dot7x28mm</defName>
+    <label>5.7x28mm</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>7</damageAmountBase>
+      <speed>150</speed>
+    </projectile>
+   </ThingDef>
+   
+   <!-- =============FN P90============== -->
+   
+   <ThingDef ParentName="BaseHumanGunPDW">
+    <defName>Gun_p90_cwm</defName>
+    <label>FN P90</label>
+    <description>Developed in Belgium as a Personal Defense Weapon for vehicle crews, Special Forces and Counter-Terrorist groups the P90 is a compact and capable weapon system.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_p90</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <WorkToMake>60000</WorkToMake>
+      <MarketValue>715</MarketValue>
+	  <Mass>2.78</Mass>
+      <AccuracyTouch>0.96</AccuracyTouch>
+      <AccuracyShort>0.76</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.30</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>AdvancedGun</li>
+    </weaponTags>
+	<costList>
+	  <Steel>60</Steel>
+	  <Component>2</Component>
+	</costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_5dot7x28mm</projectileDef>
+        <warmupTime>1.2</warmupTime>
+        <range>36</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>Shotp90</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.3</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+   
+    <!-- =============Machine pistol norm============== -->
+
+   <ThingDef ParentName="BaseHumanGunPDW">
+    <defName>Gun_MachinePistol</defName>
+    <label>Machine pistol</label>
+    <description>A micro-submachine gun. Short range, low power, high rate of fire. Very quick to aim and fire.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/MachinePistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractSMG</soundInteract>
+	<canBeSpawningInventory>false</canBeSpawningInventory>
+    <tradeability>Never</tradeability>
+    <statBases>
+      <WorkToMake>50000</WorkToMake>
+      <MarketValue>550</MarketValue>
+	  <Mass>2.5</Mass>
+      <AccuracyTouch>0.73</AccuracyTouch>
+      <AccuracyShort>0.62</AccuracyShort>
+      <AccuracyMedium>0.43</AccuracyMedium>
+      <AccuracyLong>0.15</AccuracyLong>
+      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>90</Steel>
+      <Component>3</Component>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_MachinePistol</projectileDef>
+        <warmupTime>0.5</warmupTime>
+        <range>31</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>ShotMachinePistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+
+
+  <!-- =============heavy SMG norm============== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_HeavySMG</defName>
+    <label>heavy SMG bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <speed>122</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanGunPDW">
+    <defName>Gun_HeavySMG</defName>
+    <label>heavy SMG</label>
+    <description>A compact, wide-caliber slug-thrower. Very short range, but it packs a punch and handles quite well.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/HeavySMG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractSMG</soundInteract>
+	<canBeSpawningInventory>false</canBeSpawningInventory>
+    <tradeability>Never</tradeability>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <MarketValue>600</MarketValue>
+	  <Mass>3.5</Mass>
+      <AccuracyTouch>0.89</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.37</AccuracyMedium>
+      <AccuracyLong>0.22</AccuracyLong>
+      <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>130</Steel>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_HeavySMG</projectileDef>
+        <warmupTime>0.8</warmupTime>
+        <range>30</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+        <soundCast>ShotHeavySMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+  </ThingDef>
+   
+   
+   
+</ThingDefs> 

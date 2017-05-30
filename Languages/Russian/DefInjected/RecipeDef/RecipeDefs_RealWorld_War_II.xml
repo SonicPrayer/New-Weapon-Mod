@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LanguageData>  
+
+   
+   
+   <Gun_mosin_cwm.label>Сделать Винтовку Мосина</Gun_mosin_cwm.label>
+   <Gun_mosin_cwm.description>Сделать Винтовку Мосина.</Gun_mosin_cwm.description>
+   <Gun_mosin_cwm.jobString>делает Винтовку Мосина</Gun_mosin_cwm.jobString>
+   
+   <Gun_gewehr98_cwm.label>Сделать Gewehr 98</Gun_gewehr98_cwm.label>
+   <Gun_gewehr98_cwm.description>Сделать Gewehr 98.</Gun_gewehr98_cwm.description>
+   <Gun_gewehr98_cwm.jobString>делает Gewehr 98</Gun_gewehr98_cwm.jobString>
+   
+   <Gun_ppsh_cwm.label>Сделать ППШ</Gun_ppsh_cwm.label>
+   <Gun_ppsh_cwm.description>Сделать ППШ.</Gun_ppsh_cwm.description>
+   <Gun_ppsh_cwm.jobString>делает ППШ</Gun_ppsh_cwm.jobString>
+   
+   <Gun_tompson_cwm.label>Сделать M1928A1</Gun_tompson_cwm.label>
+   <Gun_tompson_cwm.description>Сделать M1928A1.</Gun_tompson_cwm.description>
+   <Gun_tompson_cwm.jobString>делает M1928A1</Gun_tompson_cwm.jobString>
+   
+   <Gun_mp40_cwm.label>Сделать MP 40</Gun_mp40_cwm.label>
+   <Gun_mp40_cwm.description>Сделать MP 40.</Gun_mp40_cwm.description>
+   <Gun_mp40_cwm.jobString>делает MP 40</Gun_mp40_cwm.jobString>
+   
+   <Gun_mg42_cwm.label>Сделать MG 42</Gun_mg42_cwm.label>
+   <Gun_mg42_cwm.description>Сделать MG 42.</Gun_mg42_cwm.description>
+   <Gun_mg42_cwm.jobString>делает MG 42</Gun_mg42_cwm.jobString>
+ 
+ 
+</LanguageData>

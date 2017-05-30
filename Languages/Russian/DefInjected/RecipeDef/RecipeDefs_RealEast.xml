@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LanguageData>  
+
+   
+   
+   <Gun_ak74_cwm.label>Сделать АК74</Gun_ak74_cwm.label>
+   <Gun_ak74_cwm.description>Сделать АК74.</Gun_ak74_cwm.description>
+   <Gun_ak74_cwm.jobString>делает АК74</Gun_ak74_cwm.jobString>
+   
+   <Gun_aks74_cwm.label>Сделать АКС74</Gun_aks74_cwm.label>
+   <Gun_aks74_cwm.description>Сделать АКС74.</Gun_aks74_cwm.description>
+   <Gun_aks74_cwm.jobString>делает АКС74</Gun_aks74_cwm.jobString>
+   
+   <Gun_rpk74_cwm.label>Сделать РПК74</Gun_rpk74_cwm.label>
+   <Gun_rpk74_cwm.description>Сделать РПК74.</Gun_rpk74_cwm.description>
+   <Gun_rpk74_cwm.jobString>делает РПК74</Gun_rpk74_cwm.jobString>
+   
+   <Gun_aks74u_cwm.label>Сделать АКС74у</Gun_aks74u_cwm.label>
+   <Gun_aks74u_cwm.description>Сделать АКС74у.</Gun_aks74u_cwm.description>
+   <Gun_aks74u_cwm.jobString>делает АКС74у</Gun_aks74u_cwm.jobString>
+   
+   <Gun_akm_cwm.label>Сделать АКМ</Gun_akm_cwm.label>
+   <Gun_akm_cwm.description>Сделать АКМ.</Gun_akm_cwm.description>
+   <Gun_akm_cwm.jobString>делает АКМ</Gun_akm_cwm.jobString>
+   
+   <Gun_aks_cwm.label>Сделать АКМС</Gun_aks_cwm.label>
+   <Gun_aks_cwm.description>Сделать АКМС.</Gun_aks_cwm.description>
+   <Gun_aks_cwm.jobString>делает АКМС</Gun_aks_cwm.jobString>
+   
+   <Gun_sks_cwm.label>Сделать СКС</Gun_sks_cwm.label>
+   <Gun_sks_cwm.description>Сделать СКС.</Gun_sks_cwm.description>
+   <Gun_sks_cwm.jobString>делает СКС</Gun_sks_cwm.jobString>
+   
+   <Gun_prozshmel_cwm.label>Сделать РПО-З «Шмель»</Gun_prozshmel_cwm.label>
+   <Gun_prozshmel_cwm.description>Сделать РПО-З «Шмель».</Gun_prozshmel_cwm.description>
+   <Gun_prozshmel_cwm.jobString>делает РПО-З «Шмель»</Gun_prozshmel_cwm.jobString>
+ 
+</LanguageData>

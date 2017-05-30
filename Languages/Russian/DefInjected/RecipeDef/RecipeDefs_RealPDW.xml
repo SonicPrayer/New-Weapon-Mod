@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LanguageData>  
+
+   <Gun_m93r_cwm.label>Сделать Beretta 93R</Gun_m93r_cwm.label>
+   <Gun_m93r_cwm.description>Сделать Beretta 93R.</Gun_m93r_cwm.description>
+   <Gun_m93r_cwm.jobString>делает Beretta 93R</Gun_m93r_cwm.jobString>
+   
+   <Gun_scorpionvz68_cwm.label>Сделать Scorpion Vz.68</Gun_scorpionvz68_cwm.label>
+   <Gun_scorpionvz68_cwm.description>Сделать Scorpion Vz.68.</Gun_scorpionvz68_cwm.description>
+   <Gun_scorpionvz68_cwm.jobString>делает Scorpion Vz.68</Gun_scorpionvz68_cwm.jobString>
+   
+   <Gun_uzi_cwm.label>Сделать UZI Carbine</Gun_uzi_cwm.label>
+   <Gun_uzi_cwm.description>Сделать UZI Carbine.</Gun_uzi_cwm.description>
+   <Gun_uzi_cwm.jobString>делает UZI Carbine</Gun_uzi_cwm.jobString>
+   
+   <Gun_mp5a2_cwm.label>Сделать MP5А2</Gun_mp5a2_cwm.label>
+   <Gun_mp5a2_cwm.description>Сделать MP5А2.</Gun_mp5a2_cwm.description>
+   <Gun_mp5a2_cwm.jobString>делает MP5А2</Gun_mp5a2_cwm.jobString>
+   
+   <Gun_mp5sd_cwm.label>Сделать MP5SD</Gun_mp5sd_cwm.label>
+   <Gun_mp5sd_cwm.description>Сделать MP5SD.</Gun_mp5sd_cwm.description>
+   <Gun_mp5sd_cwm.jobString>делает MP5SD</Gun_mp5sd_cwm.jobString>
+   
+   <Gun_ump_cwm.label>Сделать HK UMP</Gun_ump_cwm.label>
+   <Gun_ump_cwm.description>Сделать HK UMP.</Gun_ump_cwm.description>
+   <Gun_ump_cwm.jobString>делает HK UMP</Gun_ump_cwm.jobString>
+   
+   <Gun_p90_cwm.label>Сделать FN P90</Gun_p90_cwm.label>
+   <Gun_p90_cwm.description>Сделать FN P90.</Gun_p90_cwm.description>
+   <Gun_p90_cwm.jobString>делает FN P90</Gun_p90_cwm.jobString>
+
+   <Gun_pp19_cwm.label>Сделать ПП-19</Gun_pp19_cwm.label>
+   <Gun_pp19_cwm.description>Сделать ПП-19.</Gun_pp19_cwm.description>
+   <Gun_pp19_cwm.jobString>делает ПП-19</Gun_pp19_cwm.jobString>
+ 
+ 
+</LanguageData>

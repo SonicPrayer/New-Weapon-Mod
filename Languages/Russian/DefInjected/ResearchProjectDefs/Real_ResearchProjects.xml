@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<Gun_dshkm.label>ДШКМ</Gun_dshkm.label>
+	<Gun_dshkm.description>Дает возможность постройки станкового крупнокалиберного пулемета ДШКМ.</Gun_dshkm.description>
+	
+	<Gun_spg9_res.label>СПГ-9</Gun_spg9_res.label>
+	<Gun_spg9_res.description>Дает возможность постройки станкового противотанкового гранатомёта СПГ-9 «Копьё».</Gun_spg9_res.description>
+	
+	<Pistols_onelvl.label>Пистолеты 1 уровень</Pistols_onelvl.label>
+	<Pistols_onelvl.description>Открывает доступ к Colt Mustang, Beretta 92.</Pistols_onelvl.description>
+	
+	<Pistols_twolvl.label>Пистолеты 2 уровень</Pistols_twolvl.label>
+	<Pistols_twolvl.description>Открывает доступ к M1911.</Pistols_twolvl.description>
+	
+	<Pistols_threelvl.label>Пистолеты 3 уровень</Pistols_threelvl.label>
+	<Pistols_threelvl.description>Открывает доступ к .44 Magnum, Desert Eagle.</Pistols_threelvl.description>
+	
+	<PDW_onelvl.label>PDW 1 уровень</PDW_onelvl.label>
+	<PDW_onelvl.description>Открывает доступ к UZI Carbine, Beretta 93R, Scorpion Vz.68.</PDW_onelvl.description>
+	
+	<PDW_twolvl.label>PDW 2 уровень</PDW_twolvl.label>
+	<PDW_twolvl.description>Открывает доступ к MP5А2, MP5SD, ПП-19.</PDW_twolvl.description>
+	
+	<PDW_threelvl.label>PDW 3 уровень</PDW_threelvl.label>
+	<PDW_threelvl.description>Открывает доступ к HK UMP, FN P90.</PDW_threelvl.description>
+	
+	<Pump_shotgun.label>Помповые дробовики</Pump_shotgun.label>
+	<Pump_shotgun.description>Открывает доступ к Winchester Model 1887, Mossberg 500A.</Pump_shotgun.description>
+	
+	<Automatic_shotgun.label>Автоматические дробовики</Automatic_shotgun.label>
+	<Automatic_shotgun.description>Открывает доступ к Сайга 12К, M1014.</Automatic_shotgun.description>
+	
+	<World_War_II_onelvl.label>Винтовки Второй мировой войны</World_War_II_onelvl.label>
+	<World_War_II_onelvl.description>Открывает доступ к Витовке Мосина, Gewehr 98(Mauser 98).</World_War_II_onelvl.description>
+	
+	<World_War_II_twolvl.label>Автоматы Второй мировой войны</World_War_II_twolvl.label>
+	<World_War_II_twolvl.description>Открывает доступ к ППШ, M1928A1(Пулемет Томпсона), MP 40.</World_War_II_twolvl.description>
+	
+	<World_War_II_threelvl.label>Тяжелое оружие Второй мировой войны</World_War_II_threelvl.label>
+	<World_War_II_threelvl.description>Открывает доступ к MG 42.</World_War_II_threelvl.description>
+	
+	<Weapons_East_one.label>Оружие Востока калибра 5.45x39mm</Weapons_East_one.label>
+	<Weapons_East_one.description>Открывает доступ к АКС74у, АК74, АКС74, РПК74.</Weapons_East_one.description>
+	
+	<Weapons_Heavy_East.label>Тяжелое оружие Востока</Weapons_Heavy_East.label>
+	<Weapons_Heavy_East.description>Открывает доступ к РПО-З «Шмель».</Weapons_Heavy_East.description>
+	
+	<Weapons_East_two.label>Оружие Востока калибра 7.62x39mm</Weapons_East_two.label>
+	<Weapons_East_two.description>Открывает доступ к АКМ, АКМС, СКС.</Weapons_East_two.description>
+	
+	<Weapons_West_one.label>Оружие Запада калибра 5.56x45mm NATO</Weapons_West_one.label>
+	<Weapons_West_one.description>Открывает доступ к M16A1, M4A2, TAR-21, QBZ-95B, SIG SG 516 CQB, Steyr Scout.</Weapons_West_one.description>
+	
+	<Weapons_Heavy_West.label>Тяжелое оружие Запада</Weapons_Heavy_West.label>
+	<Weapons_Heavy_West.description>Открывает доступ к M79.</Weapons_Heavy_West.description>
+	
+	<Weapons_West_two.label>Оружие Запада калибра 7.62x51mm NATO</Weapons_West_two.label>
+	<Weapons_West_two.description>Открывает доступ к M14, G3A3, Galil ACE 52.</Weapons_West_two.description>
+	
+
+</LanguageData>

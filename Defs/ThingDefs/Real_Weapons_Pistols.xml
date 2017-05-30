@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ThingDefs>
+
+   <ThingDef Name="BaseGunPistols" Abstract="True">
+		<category>Item</category>
+		<thingClass>ThingWithComps</thingClass>
+		<equipmentType>Primary</equipmentType>
+		<pathCost>10</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<selectable>True</selectable>
+		<graphicData>
+		  <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <Flammability>1.0</Flammability>
+		  <DeteriorationRate>1</DeteriorationRate>
+		  <SellPriceFactor>0.5</SellPriceFactor>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<techLevel>Industrial</techLevel>
+		<thingCategories>
+		  <li>WeaponsRanged</li>
+		</thingCategories>
+		<inspectorTabs>
+		  <li>ITab_Art</li>
+		</inspectorTabs>
+		<comps>
+		  <li Class="CompProperties_Forbiddable"/>
+		  <li>
+			<compClass>CompEquippable</compClass>
+		  </li>
+		  <li>
+			<compClass>CompQuality</compClass>
+		  </li>
+		  <li Class="CompProperties_Art">
+			<nameMaker>ArtName_WeaponGun</nameMaker>
+			<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+			<minQualityForArtistic>Excellent</minQualityForArtistic>
+		  </li>
+		</comps>
+	  </ThingDef>
+
+	  <ThingDef Name="BaseMakeableGunPistols" ParentName="BaseGunPistols" Abstract="True">
+		<recipeMaker>
+		  <workSpeedStat>SmithingSpeed</workSpeedStat>
+		  <workSkill>Crafting</workSkill>
+		  <effectWorking>Smith</effectWorking>
+		  <soundWorking>Recipe_Smith</soundWorking>
+		  <recipeUsers>
+			<li>TableMachining</li>
+		  </recipeUsers>
+		  <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+		</recipeMaker>
+	  </ThingDef>
+
+
+	  <ThingDef Name="BaseHumanGunPistols" ParentName="BaseGunPistols" Abstract="True">
+		<weaponTags>
+		  <li>Gun</li>
+		</weaponTags>
+	  </ThingDef>
+	  
+	  <ThingDef Name="BaseHumanMakeableGunPistols" ParentName="BaseMakeableGunPistols" Abstract="True">
+		<weaponTags>
+		  <li>Gun</li>
+		</weaponTags>
+	  </ThingDef>
+	  
+<!-- =============1lvl============== -->
+	  
+   <!-- =============9x19mm============== -->	  
+	  
+   <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Pistol</defName>
+    <label>9x19mm</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+   </ThingDef>
+
+   <!-- =============Colt Mustang============== -->
+ 
+   <ThingDef ParentName="BaseHumanGunPistols">
+    <defName>Gun_coltmustang_cwm</defName>
+    <label>Colt Mustang</label>
+    <description>The Colt Mustang is a line of two lightweight, single-action pocket pistols chambered for the .380 ACP cartridge, produced by Colt's Manufacturing Company.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_coltmustang</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <MarketValue>150</MarketValue>
+	  <Mass>0.34</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.36</AccuracyMedium>
+      <AccuracyLong>0.20</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Pistols</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Pistol</projectileDef>
+        <warmupTime>0.3</warmupTime>
+        <range>22</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shot_coltmustang</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+   <!-- =============Beretta 92============== -->
+   
+   <ThingDef ParentName="BaseHumanGunPistols">
+    <defName>Gun_m9_cwm</defName>
+    <label>Beretta 92</label>
+    <description>Formally known as Pistol, Semiautomatic, 9mm, M9, the M9 was selected as the primary sidearm of the entire United States military in 1985.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_m9</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <MarketValue>180</MarketValue>
+	  <Mass>0.95</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.56</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Pistols</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Pistol</projectileDef>
+        <warmupTime>0.3</warmupTime>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shotm9</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+   
+   
+<!-- =============2lvl============== -->   
+
+    <!-- =============11.43x23mm============== -->
+	
+   <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_11dot43x23mm</defName>
+    <label>11.43x23mm</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>100</speed>
+    </projectile>
+   </ThingDef>
+   
+   <!-- =============M1911============== -->
+   
+   <ThingDef ParentName="BaseHumanGunPistols">
+    <defName>Gun_m1911_cwm</defName>
+    <label>M1911</label>
+    <description>The M1911 is one of the most popular pistols in the world. Adopted in 1911 for the US armed forces, the M1911 served as the primary side arm through to 1985.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_m1911</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+	  <WorkToMake>30000</WorkToMake>
+      <MarketValue>250</MarketValue>
+	  <Mass>1.12</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.35</AccuracyLong>
+      <RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Pistols</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_11dot43x23mm</projectileDef>
+        <warmupTime>0.5</warmupTime>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shotm1911</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+   
+   
+<!-- =============3lvl============== -->   
+
+   <!-- =============10.9x33mmR============== -->
+	
+   <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_10dot9x33mm_r</defName>
+    <label>10.9x33mmR</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <speed>90</speed>
+    </projectile>
+   </ThingDef>
+   
+   <!-- =============.44 Magnum============== -->
+  
+   <ThingDef ParentName="BaseHumanGunPistols">
+    <defName>Gun_magnum44_cwm</defName>
+    <label>.44 Magnum</label>
+    <description>A .44 Magnum, the most powerful handgun in the world, this particular model features a ported barrel, a compact frame for easy carry, and of course, a round that will blow your head clean off.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_magnum44</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <MarketValue>280</MarketValue>
+	  <Mass>1.4</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.72</AccuracyShort>
+      <AccuracyMedium>0.52</AccuracyMedium>
+      <AccuracyLong>0.20</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>pistols</li>
+    </weaponTags>
+	<costList>
+      <Steel>30</Steel>
+      <Component>2</Component>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_10dot9x33mm_r</projectileDef>
+        <warmupTime>0.8</warmupTime>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shotmagnum44</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+   <!-- =============Desert Eagle============== -->
+   
+   <ThingDef ParentName="BaseHumanGunPistols">
+    <defName>Gun_deserteagle_cwm</defName>
+    <label>Desert Eagle</label>
+    <description>The IMI Desert Eagle is a semi-automatic handgun notable for chambering the largest centerfire cartridge of any magazine fed, self-loading pistol. It has a unique design with a triangular barrel and large muzzle.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_deserteagle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <MarketValue>300</MarketValue>
+	  <Mass>2.0</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.73</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.30</AccuracyLong>
+      <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>pistols</li>
+    </weaponTags>
+	<costList>
+      <Steel>30</Steel>
+      <Component>2</Component>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_10dot9x33mm_r</projectileDef>
+        <warmupTime>0.7</warmupTime>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shotdeserteagle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+   <!-- =============pistol norm============== -->
+   
+   <ThingDef ParentName="BaseHumanGunPistols">
+    <defName>Gun_Pistol</defName>
+    <label>pistol</label>
+    <description>Ancient pattern automatic pistol. Weak and short range, but quick.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Pistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+	<canBeSpawningInventory>false</canBeSpawningInventory>
+    <tradeability>Never</tradeability>
+    <statBases>
+      <MarketValue>200</MarketValue>
+	  <Mass>1.2</Mass>
+      <AccuracyTouch>0.91</AccuracyTouch>
+      <AccuracyShort>0.71</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.32</AccuracyLong>
+      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Pistol</projectileDef>
+        <warmupTime>0.3</warmupTime>
+        <range>24</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+    </equippedStatOffsets>
+  </ThingDef>
+  
+</ThingDefs> 

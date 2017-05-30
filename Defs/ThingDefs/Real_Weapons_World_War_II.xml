@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ThingDefs>
+
+   <ThingDef Name="BaseGunWWII" Abstract="True">
+		<category>Item</category>
+		<thingClass>ThingWithComps</thingClass>
+		<equipmentType>Primary</equipmentType>
+		<pathCost>10</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<selectable>True</selectable>
+		<graphicData>
+		  <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <Flammability>1.0</Flammability>
+		  <DeteriorationRate>1</DeteriorationRate>
+		  <SellPriceFactor>0.5</SellPriceFactor>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<techLevel>Industrial</techLevel>
+		<thingCategories>
+		  <li>WeaponsRanged</li>
+		</thingCategories>
+		<inspectorTabs>
+		  <li>ITab_Art</li>
+		</inspectorTabs>
+		<comps>
+		  <li Class="CompProperties_Forbiddable"/>
+		  <li>
+			<compClass>CompEquippable</compClass>
+		  </li>
+		  <li>
+			<compClass>CompQuality</compClass>
+		  </li>
+		  <li Class="CompProperties_Art">
+			<nameMaker>ArtName_WeaponGun</nameMaker>
+			<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+			<minQualityForArtistic>Excellent</minQualityForArtistic>
+		  </li>
+		</comps>
+	  </ThingDef>
+
+	  <ThingDef Name="BaseMakeableGunWWII" ParentName="BaseGunWWII" Abstract="True">
+		<recipeMaker>
+		  <workSpeedStat>SmithingSpeed</workSpeedStat>
+		  <workSkill>Crafting</workSkill>
+		  <effectWorking>Smith</effectWorking>
+		  <soundWorking>Recipe_Smith</soundWorking>
+		  <recipeUsers>
+			<li>TableMachining</li>
+		  </recipeUsers>
+		  <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+		</recipeMaker>
+	  </ThingDef>
+
+
+	  <ThingDef Name="BaseHumanGunWWII" ParentName="BaseGunWWII" Abstract="True">
+		<weaponTags>
+		  <li>Gun</li>
+		</weaponTags>
+	  </ThingDef>
+	  
+	  <ThingDef Name="BaseHumanMakeableGunWWII" ParentName="BaseMakeableGunWWII" Abstract="True">
+		<weaponTags>
+		  <li>Gun</li>
+		</weaponTags>
+	  </ThingDef>
+	  
+<!-- =============Rifles============== -->
+	  
+   <!-- =============7.62x54mm============== -->	  
+	  
+   <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_7dot62x54mm_m</defName>
+    <label>7.62x54mm</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <speed>140</speed>
+    </projectile>
+   </ThingDef>
+  
+   <!-- =============Mosin–Nagant============== -->
+  
+   <ThingDef ParentName="BaseHumanGunWWII">
+    <defName>Gun_mosin_cwm</defName>
+    <label>Mosin–Nagant</label>
+    <description>The Mosin–Nagant is a five-shot, bolt-action, internal magazine-fed, military rifle, developed by the Imperial Russian Army in 1882–91, and used by the armed forces of the Russian Empire, the Soviet Union and various other nations.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_mosin</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>500</MarketValue>
+	  <Mass>4.5</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.95</AccuracyShort>
+      <AccuracyMedium>0.93</AccuracyMedium>
+      <AccuracyLong>0.90</AccuracyLong>
+      <RangedWeapon_Cooldown>3.3</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Rifles</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_7dot62x54mm_m</projectileDef>
+        <warmupTime>2.2</warmupTime>
+        <range>50</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>Shotmosin</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.4</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+   <!-- =============bolt-action rifle bullet norm============== -->
+
+   <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_BoltActionRifle</defName>
+    <label>bolt-action rifle bullet</label>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <speed>70</speed>
+    </projectile>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+   </ThingDef>
+   <ThingDef ParentName="BaseHumanGunWWII">
+    <defName>Gun_BoltActionRifle</defName>
+    <label>bolt-action rifle</label>
+    <description>Ancient pattern bolt-action rifle. Good range, good power, low rate of fire.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/BoltActionRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+	<generateCommonality>1.5</generateCommonality>
+	<canBeSpawningInventory>false</canBeSpawningInventory>
+    <tradeability>Never</tradeability>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.96</AccuracyShort>
+      <AccuracyMedium>0.96</AccuracyMedium>
+      <AccuracyLong>0.90</AccuracyLong>
+      <RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <Component>3</Component>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_BoltActionRifle</projectileDef>
+        <warmupTime>1.9</warmupTime>
+        <range>37</range>
+        <soundCast>ShotBoltActionRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+   </ThingDef>
+   
+   <!-- =============7.92x57mm============== -->
+  
+   <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_7dot92x57mm</defName>
+    <label>7.92x57mm</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>21</damageAmountBase>
+      <speed>140</speed>
+    </projectile>
+   </ThingDef>
+   
+   <!-- =============Gewehr 98============== -->
+   
+   <ThingDef ParentName="BaseHumanGunWWII">
+    <defName>Gun_gewehr98_cwm</defName>
+    <label>Gewehr 98</label>
+    <description>The Gewehr 98 (abbreviated G98, Gew 98 or M98) is a German bolt-action Mauser rifle firing cartridges from a 5-round internal clip-loaded magazine that was the German service rifle from 1898 to 1945, when it was replaced by the Karabiner 98k.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_gewehr98</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>600</MarketValue>
+	  <Mass>4.1</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.95</AccuracyShort>
+      <AccuracyMedium>0.95</AccuracyMedium>
+      <AccuracyLong>0.92</AccuracyLong>
+      <RangedWeapon_Cooldown>2.7</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Rifles</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_7dot92x57mm</projectileDef>
+        <warmupTime>2.1</warmupTime>
+        <range>50</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>Shotgewehr98</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.4</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+<!-- =============Submachine gun============== -->
+
+   <!-- =============7.62x25mm============== -->
+	  
+   <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_7dot62x25mm</defName>
+    <label>7.62x25mm</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>120</speed>
+    </projectile>
+   </ThingDef>
+   
+   <!-- =============PPSH============== -->
+   
+   <ThingDef ParentName="BaseHumanGunWWII">
+    <defName>Gun_ppsh_cwm</defName>
+    <label>PPSH</label>
+    <description>The PPSh-41 is a Soviet submachine gun designed by Georgi Shpagin as a cheap, reliable, and simplified alternative to the PPD-40. Common nicknames are "pe-pe-sha" from its three-letter prefix and "papasha", meaning "daddy".</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_ppsh</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <MarketValue>450</MarketValue>
+	  <Mass>5.3</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.68</AccuracyShort>
+      <AccuracyMedium>0.53</AccuracyMedium>
+      <AccuracyLong>0.36</AccuracyLong>
+      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>pistols</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_7dot62x25mm</projectileDef>
+        <warmupTime>0.8</warmupTime>
+        <range>34</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>Shotppsh</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+   <!-- =============M1928A1============== -->
+   
+   <ThingDef ParentName="BaseHumanGunWWII">
+    <defName>Gun_tompson_cwm</defName>
+    <label>M1928A1</label>
+    <description>The Thompson submachine gun is an American submachine gun, invented by John T. Thompson in 1918, that became infamous during the Prohibition era. It was a common sight in the media of the time, being used by both law enforcement officers and criminals.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_tompson</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <MarketValue>450</MarketValue>
+	  <Mass>4.8</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.72</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.36</AccuracyLong>
+      <RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>pistols</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_11dot43x23mm</projectileDef>
+        <warmupTime>0.9</warmupTime>
+        <range>35</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>Shottompson</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+   <!-- =============MP 40============== -->
+   
+   <ThingDef ParentName="BaseHumanGunWWII">
+    <defName>Gun_mp40_cwm</defName>
+    <label>MP 40</label>
+    <description>The MP 40 was a submachine gun chambered for the 9×19mm Parabellum cartridge. It was developed in Nazi Germany and used extensively by the Axis powers during World War II.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_mp40</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>470</MarketValue>
+	  <Mass>5</Mass>
+      <AccuracyTouch>0.92</AccuracyTouch>
+      <AccuracyShort>0.73</AccuracyShort>
+      <AccuracyMedium>0.52</AccuracyMedium>
+      <AccuracyLong>0.34</AccuracyLong>
+      <RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>pdw</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_MachinePistol</projectileDef>
+        <warmupTime>1.0</warmupTime>
+        <range>32</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shotmp40</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+<!-- =============Heavy weapons============== -->   
+
+   <!-- =============7.62x57mm MG============== --> 
+   
+   <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_7dot92x57mm_mg</defName>
+    <label>7.62x57mm MG</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <speed>130</speed>
+    </projectile>
+   </ThingDef>
+   
+   <!-- =============MG 42============== -->
+   
+   <ThingDef ParentName="BaseHumanGunWWII">
+    <defName>Gun_mg42_cwm</defName>
+    <label>MG 42</label>
+    <description>The MG 42 is a 7.92×57mm Mauser general purpose machine gun designed in Nazi Germany and used extensively by the Wehrmacht and the Waffen-SS during the second half of World War II.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gun_mg42</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+	  <Mass>11.57</Mass>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.53</AccuracyMedium>
+      <AccuracyLong>0.38</AccuracyLong>
+      <RangedWeapon_Cooldown>3.85</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>AdvancedGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_7dot92x57mm_mg</projectileDef>
+        <warmupTime>4.0</warmupTime>
+        <range>50</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>Shotmg42</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+      </li>
+    </verbs>
+	<equippedStatOffsets>
+      <MoveSpeed>-1.1</MoveSpeed>
+      <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+    </equippedStatOffsets>
+   </ThingDef>
+   
+   
+</ThingDefs> 

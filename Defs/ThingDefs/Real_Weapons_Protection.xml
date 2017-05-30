@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Gun_dshkm_def</defName>
+    <label>Stationary DShKM</label>
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicData>
+      <texPath>Things/Defense/Guntripod</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,1)</interactionCellOffset>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>4000</WorkToBuild>
+      <Beauty>-10</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>1</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
+      </li>
+     </comps>
+    <description>The DShK 1938 is a Soviet heavy machine gun firing the 12.7×108mm cartridge. In 1946, the DShK 1938/46 or DShKM (M for modernized) version was introduced.</description>
+    <size>(1,1)</size>
+    <DrawGUIOverlay>True</DrawGUIOverlay>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.85</fillPercent>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>
+    <costList>
+      <Steel>130</Steel>
+      <Component>4</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <specialDisplayRadius>60</specialDisplayRadius>
+    <building>
+      <turretGunDef>Gun_dshkm_cwm</turretGunDef>
+      <turretBurstCooldownTime>5.15</turretBurstCooldownTime>
+      <turretTopgraphicPath>Things/Defense/Gun_dshkm</turretTopgraphicPath>
+    </building>
+    <staticSunShadowHeight>0.00</staticSunShadowHeight>
+    <researchPrerequisites>
+      <li>Gun_dshkm</li>
+    </researchPrerequisites>
+  </ThingDef>
+  
+  
+  <!-- ============================================================== -->
+  
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>Gun_spg9_def</defName>
+    <label>Stationary SPG-9 Kopye</label>
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicData>
+      <texPath>Things/Defense/Guntripod</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(1,0,0)</interactionCellOffset>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>2.0</Flammability>
+      <WorkToBuild>5000</WorkToBuild>
+      <Beauty>-15</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>1</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
+      </li>
+     </comps>
+    <description>The SPG-9 Kopye (Spear) is a Russian tripod-mounted man-portable, 73 millimetre calibre recoilless gun developed by the Soviet Union.</description>
+    <size>(1,1)</size>
+    <DrawGUIOverlay>True</DrawGUIOverlay>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.85</fillPercent>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>
+    <costList>
+      <Steel>150</Steel>
+      <Component>7</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <specialDisplayRadius>60</specialDisplayRadius>
+    <building>
+      <turretGunDef>Gun_spg9_cwm</turretGunDef>
+      <turretBurstCooldownTime>11.0</turretBurstCooldownTime>
+      <turretTopgraphicPath>Things/Defense/Gun_spg9</turretTopgraphicPath>
+    </building>
+    <staticSunShadowHeight>0.00</staticSunShadowHeight>
+    <researchPrerequisites>
+      <li>Gun_spg9_res</li>
+    </researchPrerequisites>
+  </ThingDef>
+ 
+  
+</ThingDefs>

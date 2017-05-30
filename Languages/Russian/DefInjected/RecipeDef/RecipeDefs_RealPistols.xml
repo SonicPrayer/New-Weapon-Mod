@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LanguageData>  
+
+   
+   
+   <Gun_m9_cwm.label>Сделать Beretta 92</Gun_m9_cwm.label>
+   <Gun_m9_cwm.description>Сделать Beretta 92.</Gun_m9_cwm.description>
+   <Gun_m9_cwm.jobString>делает Beretta 92</Gun_m9_cwm.jobString>
+   
+   <Gun_coltmustang_cwm.label>Сделать Colt Mustang</Gun_coltmustang_cwm.label>
+   <Gun_coltmustang_cwm.description>Сделать Colt Mustang.</Gun_coltmustang_cwm.description>
+   <Gun_coltmustang_cwm.jobString>делает Colt Mustang</Gun_coltmustang_cwm.jobString>
+   
+   <Gun_m1911_cwm.label>Сделать M1911</Gun_m1911_cwm.label>
+   <Gun_m1911_cwm.description>Сделать M1911.</Gun_m1911_cwm.description>
+   <Gun_m1911_cwm.jobString>делает M1911</Gun_m1911_cwm.jobString>
+   
+   <Gun_deserteagle_cwm.label>Сделать Desert Eagle</Gun_deserteagle_cwm.label>
+   <Gun_deserteagle_cwm.description>Сделать Desert Eagle.</Gun_deserteagle_cwm.description>
+   <Gun_deserteagle_cwm.jobString>делает Desert Eagle</Gun_deserteagle_cwm.jobString>
+   
+   <Gun_magnum44_cwm.label>Сделать .44 Magnum</Gun_magnum44_cwm.label>
+   <Gun_magnum44_cwm.description>Сделать .44 Magnum.</Gun_magnum44_cwm.description>
+   <Gun_magnum44_cwm.jobString>делает .44 Magnum</Gun_magnum44_cwm.jobString>
+   
+ 
+</LanguageData>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LanguageData>  
+
+   
+   
+   <Gun_m16a1_cwm.label>Сделать M16A1</Gun_m16a1_cwm.label>
+   <Gun_m16a1_cwm.description>Сделать M16A1.</Gun_m16a1_cwm.description>
+   <Gun_m16a1_cwm.jobString>делает M16A1</Gun_m16a1_cwm.jobString>
+   
+   <Gun_m4a2_cwm.label>Сделать M4A2</Gun_m4a2_cwm.label>
+   <Gun_m4a2_cwm.description>Сделать M4A2.</Gun_m4a2_cwm.description>
+   <Gun_m4a2_cwm.jobString>делает M4A2</Gun_m4a2_cwm.jobString>
+   
+   <Gun_sig516_cwm.label>Сделать SIG SG 516 CQB</Gun_sig516_cwm.label>
+   <Gun_sig516_cwm.description>Сделать SIG SG 516 CQB.</Gun_sig516_cwm.description>
+   <Gun_sig516_cwm.jobString>делает SIG SG 516 CQB</Gun_sig516_cwm.jobString>
+   
+   <Gun_tar21_cwm.label>Сделать TAR-21</Gun_tar21_cwm.label>
+   <Gun_tar21_cwm.description>Сделать TAR-21.</Gun_tar21_cwm.description>
+   <Gun_tar21_cwm.jobString>делает TAR-21</Gun_tar21_cwm.jobString>
+   
+   <Gun_qbz95b_cwm.label>Сделать QBZ-95B</Gun_qbz95b_cwm.label>
+   <Gun_qbz95b_cwm.description>Сделать QBZ-95B.</Gun_qbz95b_cwm.description>
+   <Gun_qbz95b_cwm.jobString>делает QBZ-95B</Gun_qbz95b_cwm.jobString>
+   
+   <Gun_m14_cwm.label>Сделать M14</Gun_m14_cwm.label>
+   <Gun_m14_cwm.description>Сделать M14.</Gun_m14_cwm.description>
+   <Gun_m14_cwm.jobString>делает M14</Gun_m14_cwm.jobString>
+   
+   <Gun_g3a3_cwm.label>Сделать G3A3</Gun_g3a3_cwm.label>
+   <Gun_g3a3_cwm.description>Сделать G3A3.</Gun_g3a3_cwm.description>
+   <Gun_g3a3_cwm.jobString>делает G3A3</Gun_g3a3_cwm.jobString>
+   
+   <Gun_galil52_cwm.label>Сделать Galil ACE 52</Gun_galil52_cwm.label>
+   <Gun_galil52_cwm.description>Сделать Galil ACE 52.</Gun_galil52_cwm.description>
+   <Gun_galil52_cwm.jobString>делает Galil ACE 52</Gun_galil52_cwm.jobString>
+   
+   <Gun_m79_cwm.label>Сделать M79</Gun_m79_cwm.label>
+   <Gun_m79_cwm.description>Сделать M79.</Gun_m79_cwm.description>
+   <Gun_m79_cwm.jobString>делает M79</Gun_m79_cwm.jobString>
+   
+   <Gun_steyrscout_cwm.label>Сделать Steyr Scout</Gun_steyrscout_cwm.label>
+   <Gun_steyrscout_cwm.description>Сделать Steyr Scout.</Gun_steyrscout_cwm.description>
+   <Gun_steyrscout_cwm.jobString>делает Steyr Scout</Gun_steyrscout_cwm.jobString>
+   
+   
+  
+ 
+</LanguageData>

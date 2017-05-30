@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+
+  <ResearchProjectDef>
+    <defName>Gun_dshkm</defName>
+    <label>DShKM</label>
+    <description>Stationary DShKM. The DShK 1938 is a Soviet heavy machine gun firing the 12.7×108mm cartridge. In 1946, the DShK 1938/46 or DShKM (M for modernized) version was introduced.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Weapons_Heavy_East</li>
+    </prerequisites>
+	<researchViewX>15</researchViewX>
+	<researchViewY>0</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>Gun_spg9_res</defName>
+    <label>SPG-9 Kopye</label>
+    <description>Stationary SPG-9 Kopye. The SPG-9 Kopye (Spear) is a Russian tripod-mounted man-portable, 73 millimetre calibre recoilless gun developed by the Soviet Union.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Gun_dshkm</li>
+    </prerequisites>
+	<researchViewX>14</researchViewX>
+	<researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>Pistols_onelvl</defName>
+    <label>Pistols tier 1</label>
+    <description>Pistols tier 1: Colt Mustang, Beretta 92.</description>
+    <baseCost>200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+	<researchViewX>13</researchViewX>
+	<researchViewY>0</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>Pistols_twolvl</defName>
+    <label>Pistols tier 2</label>
+    <description>Pistols tier 2: M1911.</description>
+    <baseCost>300</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Pistols_onelvl</li>
+    </prerequisites>
+	<researchViewX>13</researchViewX>
+	<researchViewY>1</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>Pistols_threelvl</defName>
+    <label>Pistols tier 3</label>
+    <description>Pistols tier 3: .44 Magnum, Desert Eagle.</description>
+    <baseCost>400</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Pistols_twolvl</li>
+    </prerequisites>
+	<researchViewX>13</researchViewX>
+	<researchViewY>2</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>PDW_onelvl</defName>
+    <label>PDW tier 1</label>
+    <description>PDW tier 1: UZI Carbine, Beretta 93R, Scorpion Vz.68.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Pistols_threelvl</li>
+    </prerequisites>
+	<researchViewX>14</researchViewX>
+	<researchViewY>2</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>PDW_twolvl</defName>
+    <label>PDW tier 2</label>
+    <description>PDW tier 2: MP5А2, MP5SD, PP-19.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>PDW_onelvl</li>
+    </prerequisites>
+	<researchViewX>14</researchViewX>
+	<researchViewY>3</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>PDW_threelvl</defName>
+    <label>PDW tier 3</label>
+    <description>PDW tier 3: HK UMP, FN P90.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>PDW_twolvl</li>
+    </prerequisites>
+	<researchViewX>15</researchViewX>
+	<researchViewY>3</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>Pump_shotgun</defName>
+    <label>Pump shotgun</label>
+    <description>Pump shotgun: Winchester Model 1887, Mossberg 500A.</description>
+    <baseCost>900</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>PDW_twolvl</li>
+    </prerequisites>
+	<researchViewX>15</researchViewX>
+	<researchViewY>4</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>Automatic_shotgun</defName>
+    <label>Automatic shotgun</label>
+    <description>Automatic shotgun: SAIGA 12K, M1014.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Pump_shotgun</li>
+    </prerequisites>
+	<researchViewX>15</researchViewX>
+	<researchViewY>5</researchViewY>	
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>World_War_II_onelvl</defName>
+    <label>World War II Rifles</label>
+    <description>World War II Rifles: Mosin–Nagant, Gewehr 98(Mauser 98).</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Pistols_threelvl</li>
+    </prerequisites>
+	<researchViewX>13</researchViewX>
+	<researchViewY>4</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>World_War_II_twolvl</defName>
+    <label>World War II Submachine gun</label>
+    <description>World War II Rifles: PPSH, M1928A1(The Thompson submachine gun), MP 40.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>World_War_II_onelvl</li>
+    </prerequisites>
+	<researchViewX>13</researchViewX>
+	<researchViewY>5</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>World_War_II_threelvl</defName>
+    <label>World War II Heavy weapons</label>
+    <description>World War II Heavy weapons: MG 42.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>World_War_II_twolvl</li>
+    </prerequisites>
+	<researchViewX>12</researchViewX>
+	<researchViewY>5</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>Weapons_East_one</defName>
+    <label>East Weapons 5.45x39mm</label>
+    <description>East Weapons: AKS74u, AK74, AKS74, RPK74.</description>
+    <baseCost>1100</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>PDW_threelvl</li>
+    </prerequisites>
+	<researchViewX>16</researchViewX>
+	<researchViewY>2</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>Weapons_Heavy_East</defName>
+    <label>Heavy weapons East</label>
+    <description>Heavy weapons East: RPO-Z Shmel.</description>
+    <baseCost>300</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Weapons_East_one</li>
+    </prerequisites>
+	<researchViewX>16</researchViewX>
+	<researchViewY>1</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>Weapons_East_two</defName>
+    <label>East Weapons 7.62x39mm</label>
+    <description>East Weapons: AKM, AKMS, SKS.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Weapons_East_one</li>
+    </prerequisites>
+	<researchViewX>17</researchViewX>
+	<researchViewY>2</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>Weapons_West_one</defName>
+    <label>West Weapons 5.56x45mm NATO</label>
+    <description>West Weapons: M16A1, M4A2, TAR-21, QBZ-95B, SIG SG 516 CQB, Steyr Scout.</description>
+    <baseCost>1100</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>PDW_threelvl</li>
+    </prerequisites>
+	<researchViewX>16</researchViewX>
+	<researchViewY>4</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>Weapons_Heavy_West</defName>
+    <label>Heavy weapons West</label>
+    <description>Heavy weapons West: M79.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Weapons_West_one</li>
+    </prerequisites>
+	<researchViewX>16</researchViewX>
+	<researchViewY>5</researchViewY>	
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>Weapons_West_two</defName>
+    <label>West Weapons 7.62x51mm NATO</label>
+    <description>West Weapons: M14, G3A3, Galil ACE 52.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Weapons_West_one</li>
+    </prerequisites>
+	<researchViewX>17</researchViewX>
+	<researchViewY>4</researchViewY>	
+  </ResearchProjectDef>
+  
+  
+</ResearchProjectDefs>
